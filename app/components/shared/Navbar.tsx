@@ -2,13 +2,14 @@ import ClientOnly from "@/app/client/ClientOnly";
 import Image from "next/image";
 import GoogleSignInButton from "./GoogleSignInButton";
 import Link from "next/link";
+import Profile from "./Profile";
 
 type Props = {};
 
 export default function Navbar({}: Props) {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3">
         <Link href="/" className="flex items-center">
           <Image
             src="/images/pokeball.png"
@@ -24,6 +25,7 @@ export default function Navbar({}: Props) {
         <div className="flex md:order-2">
           <ClientOnly>
             <GoogleSignInButton />
+            <Profile />
           </ClientOnly>
         </div>
       </div>
