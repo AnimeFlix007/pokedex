@@ -1,5 +1,7 @@
 "use client"
 
+import { setUser } from "@/app/redux/slice/UserSlice";
+import store from "@/app/redux/store";
 import { GoogleProvider, firebaseAuth } from "@/firebase/firebase.config";
 import { FirebaseError } from "firebase/app";
 import { signInWithPopup } from "firebase/auth";
@@ -18,8 +20,8 @@ export default function GoogleSignInButton({}: Props) {
         photoURL: user.photoURL,
         id: user.uid
       }
-      console.log(userDetails);
-      
+      store.dispatch(setUser(userDetails))
+      toast.success("LoggedIn Successfully")      
     } catch (e) {
       const err = e instanceof FirebaseError
       if(err){

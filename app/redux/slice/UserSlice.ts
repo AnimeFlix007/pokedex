@@ -7,7 +7,7 @@ type initialState = {
 
 const loggedInUser: () => User | null = () => {
   if (typeof window !== "undefined") {
-    const item = window.localStorage.getItem("user_info");
+    const item = window.localStorage.getItem("pokedex_user_info");
     return item ? JSON.parse(item) : null;
   } else {
     return null;
@@ -24,11 +24,11 @@ export const userSlice = createSlice({
   reducers: {
     setUser: (state, action) => {
       state.user = action.payload;
-      localStorage.setItem("user_info", JSON.stringify(action.payload))
+      localStorage.setItem("pokedex_user_info", JSON.stringify(action.payload))
     },
     logOut: (state, action) => {
       state.user = null;
-      localStorage.removeItem("user_info")
+      localStorage.removeItem("pokedex_user_info")
     },
   },
   extraReducers: {},

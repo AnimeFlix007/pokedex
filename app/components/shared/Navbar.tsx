@@ -1,8 +1,7 @@
 import ClientOnly from "@/app/client/ClientOnly";
 import Image from "next/image";
-import GoogleSignInButton from "./GoogleSignInButton";
 import Link from "next/link";
-import Profile from "./Profile";
+import NavbarActions from "./NavbarActions";
 
 type Props = {};
 
@@ -24,8 +23,7 @@ export default function Navbar({}: Props) {
         </Link>
         <div className="flex md:order-2">
           <ClientOnly>
-            <GoogleSignInButton />
-            <Profile />
+            <NavbarActions />
           </ClientOnly>
         </div>
       </div>
