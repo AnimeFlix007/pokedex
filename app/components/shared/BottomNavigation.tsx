@@ -25,31 +25,6 @@ export default function BottomNavigation({}: Props) {
           </span>
         </Link>
         <Link
-          href={"/search"}
-          type="button"
-          className="inline-flex flex-col items-center justify-center px-5 border-r border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800 group dark:border-gray-600"
-        >
-          <svg
-            className="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="11" cy="11" r="8" />
-            <line x1="21" y1="21" x2="16.65" y2="16.65" />
-          </svg>
-
-          <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
-            Search
-          </span>
-        </Link>
-        <Link
           href={"/compare"}
           className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
         >
@@ -73,8 +48,29 @@ export default function BottomNavigation({}: Props) {
             Compare
           </span>
         </Link>
-        <button
-          type="button"
+        <Link
+          href={"/pokemon"}
+          className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
+        >
+          <svg
+            className="w-5 h-5 mb-2 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500"
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            height="100"
+            viewBox="0 0 100 100"
+            fill="none"
+          >
+            <circle cx="50" cy="50" r="45" fill="grey" />
+            <rect x="7.5" y="47.5" width="85" height="5" fill="white" />
+            <circle cx="50" cy="50" r="10" fill="white" />
+          </svg>
+
+          <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
+            Pokemon
+          </span>
+        </Link>
+        <Link
+          href="/profile"
           className="inline-flex flex-col items-center justify-center px-5 rounded-r-full hover:bg-gray-50 dark:hover:bg-gray-800 group"
         >
           <svg
@@ -89,7 +85,7 @@ export default function BottomNavigation({}: Props) {
           <span className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
             Profile
           </span>
-        </button>
+        </Link>
       </div>
     </div>
   );
