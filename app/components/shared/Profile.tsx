@@ -1,17 +1,19 @@
 "use client";
 
 import { logOut } from "@/app/redux/slice/UserSlice";
-import store from "@/app/redux/store";
+import store, { RootState } from "@/app/redux/store";
 import { firebaseAuth } from "@/firebase/firebase.config";
 import { FirebaseError } from "firebase/app";
 import { signOut } from "firebase/auth";
 import Image from "next/image";
 import React from "react";
+import { useSelector } from "react-redux";
 import { toast } from "react-toastify";
 
 type Props = {};
 
 export default function Profile({}: Props) {
+  const user = useSelector((store: RootState) => store.user.user);
   async function signOutHandler() {
     try {
       await signOut(firebaseAuth);
@@ -29,9 +31,7 @@ export default function Profile({}: Props) {
       <div className="flex items-center space-x-2 text-white hover:text-gray-300 mr-3">
         <Image
           className="w-10 h-10 rounded-full"
-          src={
-            "https://lh3.googleusercontent.com/a/AAcHTtfi8ppwwzRGHhcld9_aTOtGLgvrNNRYci9_v9uelLGxfw=s96-c"
-          }
+          src={user?.photoURL || "./images/DefaultUserImage.jpg"}
           alt="Rounded avatar"
           width={40}
           height={40}
