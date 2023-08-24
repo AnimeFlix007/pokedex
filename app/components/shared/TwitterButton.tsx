@@ -2,7 +2,7 @@
 
 import { setUser } from "@/app/redux/slice/UserSlice";
 import store from "@/app/redux/store";
-import { FacebookProvider, firebaseAuth } from "@/firebase/firebase.config";
+import { firebaseAuth } from "@/firebase/firebase.config";
 import { FirebaseError } from "firebase/app";
 import { TwitterAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";
@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 
 type Props = {};
 
-export default function FacebookButton({}: Props) {
+export default function TwitterButton({}: Props) {
   async function TwitterSignInHandler() {
     try {
       const data = await signInWithPopup(firebaseAuth, new TwitterAuthProvider());

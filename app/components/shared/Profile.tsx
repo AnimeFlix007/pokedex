@@ -36,7 +36,7 @@ export default function Profile({}: Props) {
           width={40}
           height={40}
         />
-        <span>Devjit Bose</span>
+        <span>{user?.displayName}</span>
       </div>
       <div>
         <button
