@@ -4,3 +4,8 @@ export interface User {
   photoURL: string;
   id: string;
 }
+
+export interface Pokemon {
+  name: string;
+  url: string;
+}
