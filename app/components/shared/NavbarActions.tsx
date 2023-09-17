@@ -5,7 +5,6 @@ import GoogleSignInButton from "./GoogleSignInButton";
 import Profile from "./Profile";
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/redux/store";
-import TwitterButton from "./TwitterButton";
 
 type Props = {};
 
@@ -16,10 +15,7 @@ export default function NavbarActions({}: Props) {
       {user ? (
         <Profile />
       ) : (
-        <>
           <GoogleSignInButton />
-          <TwitterButton />
-        </>
       )}
     </>
   );

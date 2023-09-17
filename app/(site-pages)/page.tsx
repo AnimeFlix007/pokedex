@@ -8,9 +8,11 @@ export default async function Home() {
   return (
     <main>
       <SearchBar />
-      {data.results.map((ele : Pokemon) => (
-        <Card key={ele.name} />
-      ))}
+      <section className="flex items-center justify-center py-4 md:py-8 flex-wrap">
+        {data.results.map((ele : Pokemon) => (
+          <Card key={ele.name} pokemonName={ele.name} />
+        ))}
+      </section>
     </main>
   );
 }
