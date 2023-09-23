@@ -2,7 +2,7 @@
 
 import { setUser } from "@/app/redux/slice/UserSlice";
 import store from "@/app/redux/store";
-import { firebaseAuth } from "@/firebase/firebase.config";
+import { firebaseAuth } from "@/app/firebase/firebase.config";
 import { FirebaseError } from "firebase/app";
 import { TwitterAuthProvider, signInWithPopup } from "firebase/auth";
 import React from "react";

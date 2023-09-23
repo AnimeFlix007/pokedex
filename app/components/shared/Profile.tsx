@@ -2,7 +2,7 @@
 
 import { logOut } from "@/app/redux/slice/UserSlice";
 import store, { RootState } from "@/app/redux/store";
-import { firebaseAuth } from "@/firebase/firebase.config";
+import { firebaseAuth } from "@/app/firebase/firebase.config";
 import { FirebaseError } from "firebase/app";
 import { signOut } from "firebase/auth";
 import Image from "next/image";
