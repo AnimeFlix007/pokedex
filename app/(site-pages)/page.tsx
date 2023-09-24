@@ -8,8 +8,15 @@ export default async function Home() {
   return (
     <main>
       <SearchBar />
-      <section className="flex items-center justify-center py-4 md:py-8 flex-wrap">
-        {data.results.map((ele : Pokemon) => (
+      <section
+        style={{
+          display: "grid",
+          gridTemplateColumns: " repeat(auto-fit, minmax(320px, 1fr))",
+          gridGap: ".5rem",
+          padding: "0% 1rem"
+        }}
+      >
+        {data.results.map((ele: Pokemon) => (
           <Card key={ele.name} pokemonName={ele.name} />
         ))}
       </section>

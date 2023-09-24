@@ -7,7 +7,7 @@ type Props = {};
 
 export default function Navbar({}: Props) {
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-slate-200 border-gray-200 ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-3">
         <Link href="/" className="flex items-center">
           <Image
@@ -17,7 +17,7 @@ export default function Navbar({}: Props) {
             width={40}
             height={40}
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-2xl font-semibold whitespace-nowrap">
             Pokedex
           </span>
         </Link>
